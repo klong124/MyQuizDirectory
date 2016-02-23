@@ -40,7 +40,6 @@ public class Picture extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
-    Activity ref;
 
     public Picture() {
         // Required empty public constructor
@@ -109,7 +108,6 @@ public class Picture extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        ref = (Activity)context;
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {

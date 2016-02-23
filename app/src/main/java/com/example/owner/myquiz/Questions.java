@@ -7,7 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 
-public class Questions extends Activity {
+public class Questions extends Activity{
     public static int count = 0;
     public static String moveTo = "Picture";
     public Intent intent;
@@ -15,9 +15,6 @@ public class Questions extends Activity {
     public Fragment texFrag = new Text();
     public Fragment scoFrag = new Score();
 
-    public void onFragmentInteraction(Uri uri) {
-        //you can leave it empty
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

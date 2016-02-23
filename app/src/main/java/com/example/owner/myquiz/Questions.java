@@ -3,6 +3,7 @@ package com.example.owner.myquiz;
 import android.app.Fragment;
 import android.content.Intent;
 import android.app.Activity;
+import android.net.Uri;
 import android.os.Bundle;
 
 
@@ -13,6 +14,10 @@ public class Questions extends Activity {
     public Fragment picFrag = new Picture();
     public Fragment texFrag = new Text();
     public Fragment scoFrag = new Score();
+
+    public void onFragmentInteraction(Uri uri) {
+        //you can leave it empty
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

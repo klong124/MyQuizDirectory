@@ -45,7 +45,8 @@
         android:layout_centerVertical="true"
         android:layout_gravity="center_horizontal|bottom"
         android:layout_marginBottom="10dp"
-        android:textSize="20dp"></Button>
+        android:textSize="20dp"
+        android:onClick="quiz_continue"></Button>
 
 
 </FrameLayout>

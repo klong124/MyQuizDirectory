@@ -1,7 +1,6 @@
 package com.example.owner.myquiz;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -83,8 +82,7 @@ public class Score extends Fragment {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager()
-                        .popBackStack();
+                Questions.moveTo = "Start"
             }
         });
         btn2.setOnClickListener(new View.OnClickListener() {

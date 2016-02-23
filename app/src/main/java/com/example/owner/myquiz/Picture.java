@@ -1,5 +1,6 @@
 package com.example.owner.myquiz;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -29,6 +30,7 @@ public class Picture extends Fragment {
     private Button btnClick;
     private EditText eText;
     public Fragment texFrag = new Text();
+    public View view;
 
 
 
@@ -38,6 +40,7 @@ public class Picture extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    Activity ref;
 
     public Picture() {
         // Required empty public constructor
@@ -70,13 +73,15 @@ public class Picture extends Fragment {
         }
     }
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
 
-        View view = inflater.inflate(R.layout.fragment_picture, container, false);
+        view = inflater.inflate(R.layout.fragment_picture, container, false);
         btnClick= (Button)view.findViewById(R.id.cont);
         eText = (EditText)view.findViewById(R.id.editText);
         btnClick.setOnClickListener(new View.OnClickListener()
@@ -87,11 +92,8 @@ public class Picture extends Fragment {
                 String answer = eText.getText().toString();
                 if (answer.equals("9"))
                     Questions.count++;
-                getFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.fragment_container, texFrag)
-                        .addToBackStack(null)
-                        .commit();;
+                Questions.moveTo = "Text";
+                ;
             }
         }) ;
         return view;
@@ -107,6 +109,7 @@ public class Picture extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        ref = (Activity)context;
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {

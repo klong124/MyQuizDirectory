@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 public class Questions extends Activity {
     public static int count = 0;
+    public static String moveTo = "Picture";
     public Intent intent;
     public Fragment picFrag = new Picture();
     public Fragment texFrag = new Text();
@@ -17,9 +18,14 @@ public class Questions extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
-        this.callPicture();
-        this.callText();
-
+        if (moveTo.equals("Picture"))
+            this.callPicture();
+        if (moveTo.equals("Text"))
+            this.callText();
+        if (moveTo.equals("Score"))
+            this.callScore();
+        if (moveTo.equals("Start"))
+            this.returnStart();
     }
     public void callPicture()
     {

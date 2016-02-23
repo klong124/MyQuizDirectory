@@ -26,6 +26,9 @@ public class Text extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private RadioButton rbutton;
+    private RadioButton wbutton1;
+    private RadioButton wbutton2;
+    private RadioButton wbutton3;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -70,8 +73,18 @@ public class Text extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_text, container, false);
         rbutton = (RadioButton)view.findViewById(R.id.radio_rob);
-        if (rbutton.isChecked())
+        wbutton1 = (RadioButton)view.findViewById(R.id.radio_horton);
+        wbutton2 = (RadioButton)view.findViewById(R.id.radio_jack);
+        wbutton3 = (RadioButton)view.findViewById(R.id.radio_greg);
+        ;
+        if (rbutton.isChecked()) {
             Questions.count++;
+            Questions.moveTo = "Score";
+        }
+        if (wbutton1.isChecked() || wbutton2.isChecked() || wbutton3.isChecked())
+        {
+            Questions.moveTo = "Score";
+        }
 
         return view;
     }

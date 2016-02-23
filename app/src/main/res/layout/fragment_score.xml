@@ -1,0 +1,44 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.Score"
+    android:background="@drawable/background">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@android:color/white"
+        android:text="Score:"
+        android:id="@+id/t"
+        android:gravity = "center"
+        android:layout_centerVertical="true"
+        android:textSize = "40dp"
+        />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play Again"
+        android:textColor = "@android:color/white"
+        android:background= "@null"
+        android:id="@+id/again"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="left|bottom" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finish Game"
+        android:textColor = "@android:color/white"
+        android:background= "@null"
+        android:id="@+id/nomore"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="right|bottom" />
+
+</FrameLayout>

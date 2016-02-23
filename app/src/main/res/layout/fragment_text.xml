@@ -1,0 +1,66 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="layout.Text">
+
+    <TextView android:id="@+id/textq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Which actor made his screen debut as Boo Radley in the 1962 film ‘To Kill a Mockingbird’?"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:background="@null"
+        android:layout_alignParentLeft="true"
+        android:textSize="20dp"
+        android:layout_alignParentStart="true"></TextView>
+
+
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="left"
+        android:layout_marginLeft="65dp"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <RadioButton android:id="@+id/radio_jack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jack Sparrow"
+            android:gravity="left"
+            android:textColor="@android:color/white"
+            android:buttonTint="@android:color/white"
+            android:textSize="30dp"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_greg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gregory Peck"
+            android:textSize="30dp"
+            android:textColor="@android:color/white"
+            android:buttonTint="@android:color/white"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_rob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Robert Duvall"
+            android:textSize="30dp"
+            android:textColor="@android:color/white"
+            android:buttonTint="@android:color/white"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_horton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horton Foote"
+            android:textSize="30dp"
+            android:textColor="@android:color/white"
+            android:buttonTint="@android:color/white"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+
+</FrameLayout>
